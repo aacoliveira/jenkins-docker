@@ -1,0 +1,48 @@
+# docker-compose.yaml
+version: '3.8'
+services:
+  
+  jenkins:
+    build:
+      context: .
+    environment:
+      - DOCKER_HOST=tcp://jenkins_docker:2375
+      #- DOCKER_CERT_PATH=/certs/client
+      #- DOCKER_TLS_VERIFY=1
+    container_name: jenkins
+    privileged: true
+    #user: 1001
+    restart: always
+    ports:
+     - 8080:8080
+     - 50000:50000    
+    networks:
+      - jenkins_docker   
+    volumes:
+      - jenkins-data:/var/jenkins_home
+  
+  dind:
+    image: docker:dind@sha256:bec82cb05983f12a14d8f169b00748f4ded8573f4da5f1d15d375b6a2470289f
+    container_name: dind
+    environment:
+      - DOCKER_TLS_CERTDIR=
+    privileged: true
+    restart: always
+    networks:
+      jenkins_docker:
+        aliases: 
+          - jenkins_docker
+    ports:
+      - 2375:2375
+      # - 2376:2376
+    tty: true
+    volumes:      
+      - jenkins-data:/var/jenkins_home
+      - docker-cache:/var/lib/docker
+
+networks:
+  jenkins_docker:
+
+volumes:
+  jenkins-data:
+  docker-cache:
