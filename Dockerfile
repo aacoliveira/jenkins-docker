@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.487-jdk21@sha256:8a3d9dfc2388a1a9a777c774b4701ac9d2498acaae0d56576c00737d55e3159f
+FROM jenkins/jenkins:2.488-jdk21@sha256:5ac04a7521461b040dbe9bdb84448fb32e590640b50ddb870697b147e585a4d5
 
 USER root
 
