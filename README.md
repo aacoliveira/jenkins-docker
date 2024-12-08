@@ -5,7 +5,8 @@
 Command:
 
 ```bash
-docker image pull jenkins/jenkins:2.487-jdk21@sha256:8a3d9dfc2388a1a9a777c774b4701ac9d2498acaae0d56576c00737d55e3159f docker:dind@sha256:bec82cb05983f12a14d8f169b00748f4ded8573f4da5f1d15d375b6a2470289f
+docker image pull jenkins/jenkins:2.487-jdk21@sha256:8a3d9dfc2388a1a9a777c774b4701ac9d2498acaae0d56576c00737d55e3159f 
+docker image pull docker:dind@sha256:bec82cb05983f12a14d8f169b00748f4ded8573f4da5f1d15d375b6a2470289f
 ```
 
 ## Plugins
