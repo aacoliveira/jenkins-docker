@@ -1,36 +1,56 @@
 # Jenkins with Docker
 
-## Resume of this Repo
+## Goal of this Repo
 
-At the end you will get a [v2.488 Jenkins server](https://www.jenkins.io/changelog/2.488/) that works together with [Docker Dind](https://hub.docker.com/_/docker) giving you the ability to spawn new containers during your CI/CD pipeline.
+At the end you will get a [v2.488 Jenkins instance](https://www.jenkins.io/changelog/2.488/) and a [Docker Dind](https://hub.docker.com/_/docker) that together gives you the ability to create new containers to be used as agents in your CI/CD pipeline flow.
 
 ## Plugins
 
-These are automatically installed during build time:
+These are automatically configured during build time:
 
 - https://plugins.jenkins.io/docker-workflow/
 - https://plugins.jenkins.io/pipeline-stage-view/
 - https://plugins.jenkins.io/prometheus/
 
-## To speed up
+## Building with Docker Compose
 
-You can download the docker images firsthand with the command:
+Use the following commands to build and get all services up and running.
+
+### Clone the repo and unzip the file
 
 ```bash
-docker image pull jenkins/jenkins:2.488-jdk21@sha256:5ac04a7521461b040dbe9bdb84448fb32e590640b50ddb870697b147e585a4d5
-docker image pull docker:dind@sha256:bec82cb05983f12a14d8f169b00748f4ded8573f4da5f1d15d375b6a2470289f
+wget -O jenkins-docker.zip https://github.com/aacoliveira/jenkins-docker/archive/refs/heads/main.zip
+unzip jenkins-docker.zip
+cd jenkins-docker-main/
 ```
 
-## Building with Compose
-
-Use the following command to build and get all services up and running:
+### Start services
 
 ```bash
+# -d flag can be used to run in detached mode and free your terminal
 docker compose up
 ```
 
-## Password location
+### Validation
 
-*Exec* into Jenkins container and get password with **cat  /var/jenkins_home/secrets/initialAdminPassword**
+To see if went well:
+
+```bash
+docker container ls
+```
+
+There must be exactly two containers named **jenkins** and **dind**.
+
+## Initial Password
+
+Exec the following command:
+
+```bash
+docker container exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
+## Login
+
+Now go to http://localhost:8080 and use *admin* user and the password obtained earlier to login.
 
 :warning: Create new users and password after initial login
