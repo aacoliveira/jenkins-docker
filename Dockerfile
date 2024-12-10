@@ -18,4 +18,4 @@ RUN apt-get clean
 
 USER jenkins
 
-RUN jenkins-plugin-cli --plugins "docker-workflow:580.vc0c340686b_54 pipeline-stage-view:2.34"
+RUN jenkins-plugin-cli --plugins "docker-workflow:580.vc0c340686b_54 pipeline-stage-view:2.34 prometheus:801.v98e119d8eeda_"

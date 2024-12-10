@@ -10,6 +10,7 @@ These are automatically installed during build time:
 
 - https://plugins.jenkins.io/docker-workflow/
 - https://plugins.jenkins.io/pipeline-stage-view/
+- https://plugins.jenkins.io/prometheus/
 
 ## To speed up
 
