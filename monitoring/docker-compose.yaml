@@ -1,0 +1,41 @@
+services:
+  prometheus:
+    image: prom/prometheus:v3.0.1@sha256:565ee86501224ebbb98fc10b332fa54440b100469924003359edf49cbce374bd
+    container_name: prometheus
+    restart: always
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'    
+    volumes:
+      - ./prometheus-config.yaml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    ports:
+      - 9090:9090
+    networks:
+      - jenkins_docker
+
+  grafana:
+    image: grafana/grafana:11.4.0@sha256:d8ea37798ccc41061a62ab080f2676dda6bf7815558499f901bdb0f533a456fb
+    container_name: grafana
+    restart: always
+    environment:
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_BASIC_ENABLED=false    
+    # volumes:
+    #   - ./grafana/provisioning:/etc/grafana/provisioning    
+    ports:
+      - "3000:3000"
+    networks:
+      - jenkins_docker
+
+networks:
+  jenkins_docker:
+    name: jenkins_jenkins_docker #nome da network no docker
+    external: true
+
+volumes:
+  prometheus-data:
