@@ -1,13 +1,14 @@
 # Prometheus and Grafana
 
-## Config file
-
-- https://prometheus.io/docs/prometheus/latest/configuration/configuration/#configuration
-
 ## Deploy
 
+```bash
 docker compose up
+```
 
-## Prometheus
+## URLs
 
-- http://localhost:9090/query
+|Tool | Location | Credentials | 
+| --- | --- | --- |
+| Prometheus | http://localhost:9090/query | - | 
+| Grafana | http://localhost:3000 | admin/admin |
