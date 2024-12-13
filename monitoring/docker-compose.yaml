@@ -34,7 +34,7 @@ services:
 
 networks:
   jenkins_docker:
-    name: jenkins_jenkins_docker #nome da network no docker
+    name: jenkins-docker_jenkins_docker #nome da network no docker
     external: true
 
 volumes:
