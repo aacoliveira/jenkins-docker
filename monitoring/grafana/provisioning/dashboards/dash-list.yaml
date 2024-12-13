@@ -1,0 +1,11 @@
+# https://grafana.com/tutorials/provision-dashboards-and-data-sources/
+# https://grafana.com/docs/grafana/latest/administration/provisioning/
+
+apiVersion: 1
+
+providers:
+  - name: DashboardDockerComposeDefault # A uniquely identifiable name for the provider
+    folder: Jenkins                     # The folder where to place the dashboards
+    type: file
+    options:
+      path: /etc/grafana/local-dashs

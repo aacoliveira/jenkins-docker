@@ -24,9 +24,10 @@ services:
     environment:
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       - GF_AUTH_ANONYMOUS_ENABLED=true
-      - GF_AUTH_BASIC_ENABLED=false    
-    # volumes:
-    #   - ./grafana/provisioning:/etc/grafana/provisioning    
+      - GF_AUTH_BASIC_ENABLED=false
+    volumes:
+      - ./dashboards/:/etc/grafana/local-dashs
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
     ports:
       - "3000:3000"
     networks:
