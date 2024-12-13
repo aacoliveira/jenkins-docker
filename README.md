@@ -54,3 +54,7 @@ docker container exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPass
 Now go to http://localhost:8080 and use *admin* user and the password obtained earlier to login.
 
 :warning: Create new users and password after initial login
+
+## Monitoring
+
+See [monitoring/README.md](monitoring/README.md) to more info on this.
