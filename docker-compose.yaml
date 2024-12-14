@@ -26,9 +26,9 @@ services:
       - DOCKER_TLS_CERTDIR=
     privileged: true
     restart: always
+    networks:       
       - n_ci_cd
       - n_monitoring
-      - jenkins_docker
     ports:
       - 2375:2375
       # - 2376:2376
