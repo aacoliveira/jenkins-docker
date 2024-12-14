@@ -4,7 +4,7 @@
 
 At the end you will get a [v2.489 Jenkins instance](https://www.jenkins.io/changelog/2.489/) and a [Docker Dind](https://hub.docker.com/_/docker) that together gives you the ability to create new containers to be used as agents in your CI/CD pipeline flow.
 
-Also, there is a optional Monitoring step at the end to get Prometheus, Grafana and some dashs.
+Also, there is a optional step at the end to get Metrics stack.
 
 ## Plugins
 
@@ -72,6 +72,6 @@ docker container exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPass
 | --- | --- | --- |
 | Jenkins UI | http://localhost:8080 | admin / initial password obtained earlier|
 
-## Monitoring
+## Optional - Metrics
 
-See [monitoring/README.md](monitoring/) to more instructions.
+See [metrics/README.md](metrics/) to more instructions.

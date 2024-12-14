@@ -16,7 +16,7 @@ services:
      #- 50000:50000   # Server Info
     networks:
       - n_ci_cd
-      - n_monitoring
+      - n_metrics
     volumes:
       - v_jenkins_home_data:/var/jenkins_home
   
@@ -29,7 +29,7 @@ services:
     restart: always
     networks:       
       - n_ci_cd
-      - n_monitoring
+      - n_metrics
     ports:
       - 2375:2375
       # - 2376:2376
@@ -41,8 +41,8 @@ services:
 networks:
   n_ci_cd:
     name: n_ci_cd
-  n_monitoring:
-    name: n_monitoring    
+  n_metrics:
+    name: n_metrics    
 
 volumes:
   v_jenkins_home_data:

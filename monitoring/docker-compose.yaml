@@ -15,7 +15,7 @@ services:
     ports:
       - 9090:9090
     networks:
-      - n_monitoring
+      - n_metrics
       - n_ci_cd
 
   grafana:
@@ -33,12 +33,12 @@ services:
     ports:
       - "3000:3000"
     networks:
-      - n_monitoring
+      - n_metrics
       - n_ci_cd
 
 networks:
-  n_monitoring:
-    name: n_monitoring
+  n_metrics:
+    name: n_metrics
   n_ci_cd:
     name: n_ci_cd    
     external: true
