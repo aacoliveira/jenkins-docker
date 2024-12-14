@@ -1,7 +1,6 @@
 {
   "__inputs": [
     {
-      "name": "DS_PROMETHEUS",
       "label": "Prometheus",
       "description": "",
       "type": "datasource",
@@ -88,8 +87,7 @@
   "panels": [
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -162,8 +160,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "default_jenkins_builds_success_build_count",
           "refId": "A"
@@ -185,8 +182,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -253,8 +249,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "rate(jenkins_job_building_duration_count[1m])",
           "refId": "A"
@@ -265,8 +260,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -342,8 +336,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "jenkins_job_queuing_duration_count",
           "format": "time_series",
@@ -353,8 +346,7 @@
         },
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "jenkins_job_queuing_duration_count{instance=\"jenkins1.eng.paloaltonetworks.local:443\"}",
           "format": "time_series",
@@ -364,8 +356,7 @@
         },
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "rate(jenkins_job_queuing_duration_count{instance=~\\\"$instance\\\"}[1m])",
           "format": "time_series",
@@ -379,8 +370,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -445,8 +435,7 @@
           "expr": "rate(jenkins_job_queuing_duration_count[1m])",
           "refId": "A",
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           }
         }
       ],
@@ -455,8 +444,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -507,8 +495,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "jenkins_health_check_score",
           "format": "time_series",
@@ -523,8 +510,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -593,8 +579,7 @@
           "refId": "A",
           "textEditor": false,
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           }
         }
       ],
@@ -603,8 +588,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -651,8 +635,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "jenkins_runs_total_total",
@@ -669,8 +652,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -717,8 +699,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "jenkins_runs_success_total",
           "format": "time_series",
@@ -732,8 +713,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -798,8 +778,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "jenkins_runs_failure_total",
           "format": "time_series",
@@ -813,8 +792,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -879,8 +857,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "jenkins_runs_unstable_total{instance=\"jenkins1.eng.paloaltonetworks.local:443\"}",
           "format": "time_series",
@@ -895,8 +872,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -966,8 +942,7 @@
           "intervalFactor": 1,
           "refId": "A",
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           }
         }
       ],
@@ -976,8 +951,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -1040,8 +1014,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "jenkins_executor_in_use_value",
@@ -1055,8 +1028,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -1111,8 +1083,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "jenkins_runs_aborted_total",
@@ -1128,8 +1099,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -1200,8 +1170,7 @@
           "refId": "A",
           "textEditor": false,
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           }
         }
       ],
@@ -1210,8 +1179,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -1263,8 +1231,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "jenkins_job_count_value",
@@ -1279,8 +1246,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -1331,8 +1297,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "jenkins_node_count_value",
@@ -1347,8 +1312,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -1399,8 +1363,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "jenkins_node_offline_value",
@@ -1419,8 +1382,7 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "description": "Build times in milliseconds of last build",
       "fieldConfig": {
@@ -1467,8 +1429,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "default_jenkins_builds_last_build_duration_milliseconds",
@@ -1517,8 +1478,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -1564,8 +1524,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "http_requests_count",
@@ -1579,8 +1538,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -1693,8 +1651,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "default_jenkins_builds_success_build_count",
@@ -1709,8 +1666,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -1776,8 +1732,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "default_jenkins_builds_last_build_duration_milliseconds",
@@ -1810,8 +1765,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -1898,8 +1852,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "default_jenkins_builds_last_build_result_ordinal",
@@ -1932,8 +1885,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -2007,8 +1959,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "rate(jenkins_job_blocked_duration_count[$__rate_interval])",
           "refId": "A"
@@ -2019,8 +1970,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "description": "The number of jobs that are in the Jenkins build queue and currently in the blocked state.",
       "fieldConfig": {
@@ -2069,8 +2019,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "expr": "jenkins_queue_blocked_value",
           "refId": "A"
@@ -2081,8 +2030,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -2156,8 +2104,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "rate(jenkins_job_building_duration_count[$__rate_interval])",
@@ -2170,8 +2117,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "description": "The number of jobs that are in the Jenkins build queue and currently in the buildable state.",
       "fieldConfig": {
@@ -2220,8 +2166,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "jenkins_queue_buildable_value",
@@ -2234,8 +2179,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -2309,8 +2253,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "rate(jenkins_job_queuing_duration_count[$__rate_interval])",
@@ -2323,8 +2266,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "description": "The number of jobs that are in the Jenkins build queue.",
       "fieldConfig": {
@@ -2373,8 +2315,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "jenkins_queue_size_value",
@@ -2387,8 +2328,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "type": "prometheus"        
       },
       "description": "The rate at which jobs are queued and the total time they spend from entering the build queue to completing building",
       "fieldConfig": {
@@ -2463,8 +2403,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "rate(jenkins_job_total_duration_count[$__rate_interval])",

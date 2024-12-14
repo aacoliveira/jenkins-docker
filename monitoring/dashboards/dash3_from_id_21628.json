@@ -30,8 +30,7 @@
   "panels": [
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "ee6jpfrgah8n4c"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -84,8 +83,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "ee6jpfrgah8n4c"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "exemplar": false,
@@ -129,8 +127,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "ee6jpfrgah8n4c"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -209,8 +206,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "ee6jpfrgah8n4c"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "default_jenkins_builds_last_build_duration_milliseconds{job=~\"$jnk\", jenkins_job=~\"$job_name\"}",
@@ -224,8 +220,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "ee6jpfrgah8n4c"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -275,8 +270,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "ee6jpfrgah8n4c"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "expr": "default_jenkins_builds_last_stage_duration_milliseconds_summary_sum{job=~\"$jnk\", jenkins_job=~\"$job_name\"}",
@@ -290,8 +284,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "ee6jpfrgah8n4c"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -353,8 +346,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "ee6jpfrgah8n4c"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "exemplar": false,
@@ -372,8 +364,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "ee6jpfrgah8n4c"
+        "type": "prometheus"        
       },
       "description": "",
       "fieldConfig": {
@@ -456,8 +447,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "ee6jpfrgah8n4c"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "exemplar": false,
@@ -475,8 +465,7 @@
     },
     {
       "datasource": {
-        "type": "prometheus",
-        "uid": "ee6jpfrgah8n4c"
+        "type": "prometheus"        
       },
       "fieldConfig": {
         "defaults": {
@@ -538,8 +527,7 @@
       "targets": [
         {
           "datasource": {
-            "type": "prometheus",
-            "uid": "ee6jpfrgah8n4c"
+            "type": "prometheus"            
           },
           "editorMode": "code",
           "exemplar": false,
@@ -567,8 +555,7 @@
     "list": [
       {
         "current": {
-          "text": "prometheus",
-          "value": "ee6jpfrgah8n4c"
+          "text": "prometheus"          
         },
         "includeAll": false,
         "label": "Prometheus datasource",
@@ -585,8 +572,7 @@
           "value": "jenkins"
         },
         "datasource": {
-          "type": "prometheus",
-          "uid": "ee6jpfrgah8n4c"
+          "type": "prometheus"          
         },
         "definition": "label_values(default_jenkins_up,job)",
         "includeAll": false,
@@ -608,8 +594,7 @@
           "value": "cria_arquivo"
         },
         "datasource": {
-          "type": "prometheus",
-          "uid": "ee6jpfrgah8n4c"
+          "type": "prometheus"          
         },
         "definition": "label_values(default_jenkins_builds_last_build_duration_milliseconds{job=\"$jnk\", buildable=\"true\"},jenkins_job)",
         "includeAll": false,
@@ -651,8 +636,7 @@
       },
       {
         "datasource": {
-          "type": "prometheus",
-          "uid": "ee6jpfrgah8n4c"
+          "type": "prometheus"          
         },
         "filters": [],
         "name": "Filters",

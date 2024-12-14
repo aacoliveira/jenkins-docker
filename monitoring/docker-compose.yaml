@@ -29,6 +29,7 @@ services:
     volumes:
       - ./dashboards/:/etc/grafana/local-dashs
       - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
     ports:
       - "3000:3000"
     networks:

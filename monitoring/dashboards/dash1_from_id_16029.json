@@ -7,6 +7,7 @@
       "type": "datasource",
       "pluginId": "prometheus",
       "pluginName": "Prometheus"
+      
     }
   ],
   "__requires": [
@@ -136,7 +137,9 @@
       },
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "jenkins_node_online_value",
           "interval": "",
@@ -144,7 +147,9 @@
           "refId": "A"
         },
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "jenkins_node_offline_value",
           "hide": false,
@@ -228,7 +233,9 @@
       },
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "jenkins_executor_in_use_value",
           "interval": "",
@@ -236,7 +243,9 @@
           "refId": "A"
         },
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "jenkins_executor_free_value",
           "hide": false,
@@ -320,7 +329,9 @@
       },
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "increase(jenkins_job_scheduled_total[60m]) / 60",
           "hide": false,
@@ -404,7 +415,9 @@
       "pluginVersion": "8.4.3",
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "jenkins_queue_blocked_value",
           "interval": "",
@@ -412,7 +425,9 @@
           "refId": "A"
         },
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "jenkins_queue_buildable_value",
           "hide": false,
@@ -421,7 +436,9 @@
           "refId": "B"
         },
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "jenkins_queue_pending_value",
           "hide": false,
@@ -430,7 +447,9 @@
           "refId": "C"
         },
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "jenkins_queue_stuck_value",
           "hide": false,
@@ -513,7 +532,9 @@
       },
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "default_jenkins_executors_queue_length{}",
           "interval": "",
@@ -595,7 +616,9 @@
       },
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "default_jenkins_executors_defined{}",
           "interval": "",
@@ -712,7 +735,9 @@
       },
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "default_jenkins_executors_defined{} - default_jenkins_executors_online{}",
           "interval": "",
@@ -802,7 +827,9 @@
       },
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "default_jenkins_executors_idle{}",
           "interval": "",
@@ -887,7 +914,9 @@
       },
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "avg by (repo) (default_jenkins_builds_last_build_duration_milliseconds{})",
           "interval": "",
@@ -969,7 +998,9 @@
       },
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "default_jenkins_executors_busy{}",
           "interval": "",
@@ -1055,7 +1086,9 @@
       },
       "targets": [
         {
-          "datasource": "${DS_PROMETHEUS}",
+          "datasource": {
+            "type": "prometheus"            
+          },
           "exemplar": true,
           "expr": "sum by (repo) (rate(default_jenkins_builds_failed_build_count_total{}[$__rate_interval])) / (sum by (repo) (rate(default_jenkins_builds_success_build_count_total{}[$__rate_interval])) + sum by (repo) (rate(default_jenkins_builds_failed_build_count_total{}[$__rate_interval])))",
           "interval": "",
