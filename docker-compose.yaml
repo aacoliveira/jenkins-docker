@@ -4,9 +4,10 @@ services:
       context: .
     container_name: jenkins      
     environment:
+      - JAVA_OPTS="-Duser.timezone=America/Sao_Paulo"
       - DOCKER_HOST=tcp://dind:2375
       #- DOCKER_CERT_PATH=/certs/client
-      #- DOCKER_TLS_VERIFY=1
+      #- DOCKER_TLS_VERIFY=1    
     privileged: true
     #user: 1001
     restart: always
