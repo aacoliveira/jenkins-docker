@@ -18,7 +18,7 @@ services:
       - n_ci_cd
       - n_monitoring
     volumes:
-      - jenkins-data:/var/jenkins_home
+      - v_jenkins_home_data:/var/jenkins_home
   
   dind:
     image: docker:dind@sha256:bec82cb05983f12a14d8f169b00748f4ded8573f4da5f1d15d375b6a2470289f
@@ -35,8 +35,8 @@ services:
       # - 2376:2376
     tty: true
     volumes:      
-      - jenkins-data:/var/jenkins_home
-      - docker-cache:/var/lib/docker
+      - v_jenkins_home_data:/var/jenkins_home
+      - v_docker_dind_cache:/var/lib/docker
 
 networks:
   n_ci_cd:
@@ -45,5 +45,5 @@ networks:
     name: n_monitoring    
 
 volumes:
-  jenkins-data:
-  docker-cache:
+  v_jenkins_home_data:
+  v_docker_dind_cache:

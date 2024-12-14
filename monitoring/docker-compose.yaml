@@ -11,7 +11,7 @@ services:
       - '--web.enable-lifecycle'    
     volumes:
       - ./prometheus/prometheus-config.yaml:/etc/prometheus/prometheus.yml
-      - prometheus-data:/prometheus
+      - v_prometheus_data:/prometheus
     ports:
       - 9090:9090
     networks:
@@ -44,4 +44,4 @@ networks:
     external: true
 
 volumes:
-  prometheus-data:
+  v_prometheus_data:
