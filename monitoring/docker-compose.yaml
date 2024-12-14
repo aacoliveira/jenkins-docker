@@ -15,7 +15,8 @@ services:
     ports:
       - 9090:9090
     networks:
-      - jenkins_docker
+      - n_monitoring
+      - n_ci_cd
 
   grafana:
     image: grafana/grafana:11.4.0@sha256:d8ea37798ccc41061a62ab080f2676dda6bf7815558499f901bdb0f533a456fb
@@ -31,11 +32,14 @@ services:
     ports:
       - "3000:3000"
     networks:
-      - jenkins_docker
+      - n_monitoring
+      - n_ci_cd
 
 networks:
-  jenkins_docker:
-    name: jenkins-docker_jenkins_docker #nome da network no docker
+  n_monitoring:
+    name: n_monitoring
+  n_ci_cd:
+    name: n_ci_cd    
     external: true
 
 volumes:

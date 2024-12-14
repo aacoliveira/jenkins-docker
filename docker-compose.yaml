@@ -14,7 +14,8 @@ services:
      - 8080:8080
      - 50000:50000    
     networks:
-      - jenkins_docker   
+      - n_ci_cd
+      - n_monitoring
     volumes:
       - jenkins-data:/var/jenkins_home
   
@@ -25,7 +26,8 @@ services:
       - DOCKER_TLS_CERTDIR=
     privileged: true
     restart: always
-    networks:       
+      - n_ci_cd
+      - n_monitoring
       - jenkins_docker
     ports:
       - 2375:2375
@@ -36,7 +38,10 @@ services:
       - docker-cache:/var/lib/docker
 
 networks:
-  jenkins_docker:
+  n_ci_cd:
+    name: n_ci_cd
+  n_monitoring:
+    name: n_monitoring    
 
 volumes:
   jenkins-data:
