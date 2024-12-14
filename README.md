@@ -6,11 +6,7 @@ At the end you will get a [v2.488 Jenkins instance](https://www.jenkins.io/chang
 
 ## Plugins
 
-These are automatically configured during build time:
-
-- https://plugins.jenkins.io/docker-workflow/
-- https://plugins.jenkins.io/pipeline-stage-view/
-- https://plugins.jenkins.io/prometheus/
+These are automatically configure installed during build phase: [plugins/README.md](plugins/)
 
 ## Building with Docker Compose
 
