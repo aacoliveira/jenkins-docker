@@ -2,7 +2,9 @@
 
 ## Goal of this Repo
 
-At the end you will get a [v2.488 Jenkins instance](https://www.jenkins.io/changelog/2.488/) and a [Docker Dind](https://hub.docker.com/_/docker) that together gives you the ability to create new containers to be used as agents in your CI/CD pipeline flow.
+At the end you will get a [v2.489 Jenkins instance](https://www.jenkins.io/changelog/2.489/) and a [Docker Dind](https://hub.docker.com/_/docker) that together gives you the ability to create new containers to be used as agents in your CI/CD pipeline flow.
+
+Also, there is a optional Monitoring step at the end to get Prometheus, Grafana and some dashs.
 
 ## Plugins
 
