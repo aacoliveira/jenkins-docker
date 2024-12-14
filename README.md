@@ -24,10 +24,27 @@ unzip jenkins-docker.zip
 cd jenkins-docker-main/
 ```
 
-### Start services
+### Build
+
+Download all images:
 
 ```bash
-# -d flag can be used to run in detached mode and free your terminal
+docker compose pull
+```
+
+Build the Jenkins image:
+
+```bash
+docker compose build
+```
+
+### Start services
+
+The **-d** flag can be used on the following command to run in detached mode and free your terminal.
+
+Just Run:
+
+```bash
 docker compose up
 ```
 
@@ -51,9 +68,11 @@ docker container exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPass
 
 ## Login
 
-Now go to http://localhost:8080 and use *admin* user and the password obtained earlier to login.
-
 :warning: Create new users and password after initial login
+
+|Tool | Location | Credentials | 
+| --- | --- | --- |
+| Jenkins UI | http://localhost:8080 | admin / initial password obtained earlier|
 
 ## Monitoring
 
