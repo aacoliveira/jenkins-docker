@@ -3,7 +3,7 @@ services:
     build:
       context: .
     environment:
-      - DOCKER_HOST=tcp://jenkins_docker:2375
+      - DOCKER_HOST=tcp://dind:2375
       #- DOCKER_CERT_PATH=/certs/client
       #- DOCKER_TLS_VERIFY=1
     container_name: jenkins
