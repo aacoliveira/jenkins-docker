@@ -57,4 +57,4 @@ Now go to http://localhost:8080 and use *admin* user and the password obtained e
 
 ## Monitoring
 
-See [monitoring/README.md](monitoring/README.md) to more info on this.
+See [monitoring/README.md](monitoring/) to more instructions.
